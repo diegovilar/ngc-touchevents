@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="JavaScriptLibraryMappings">
+    <file url="file://$PROJECT_DIR$/Gruntfile.js" libraries="{Node.js Globals, Node.js v0.10.21 Core Modules, ngc-touchevents node_modules}" />
+    <file url="file://$PROJECT_DIR$/build-utils.js" libraries="{Node.js Globals, Node.js v0.10.21 Core Modules, ngc-touchevents node_modules}" />
+  </component>
+</project>
+
