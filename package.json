@@ -1,6 +1,6 @@
 {
     "name": "ngc-touchevents",
-    "version": "0.9.2",
+    "version": "0.9.3",
     "description": "Basic touch events for AngularJS",
     "homepage": "https://github.com/diegovilar/ngc-touchevents",
     "private": true,

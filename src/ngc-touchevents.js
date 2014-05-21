@@ -20,16 +20,30 @@
      * @type {!string}
      */
     var MODULE_NAME = MODULE_PREFIX + 'Touchevents';
+    
+    var START_EVENT_NAME = 'ontouchstart'    in document ? 'touchstart' :
+                           'onpointerdown'   in document ? 'pointerdown' :
+                           'onmspointerdown' in document ? 'MSPointerDown' :
+                           'mousedown';
+    
+    var END_EVENT_NAME = 'ontouchend'    in document ? 'touchend' :
+                         'onpointerup'   in document ? 'pointerup' :
+                         'onmspointerup' in document ? 'MSPointerUp' :
+                         'mouseup';
+                              
+    var MOVE_EVENT_NAME = 'ontouchmove'     in document ? 'touchmove' :
+                          'onpointermove'   in document ? 'pointermove' :
+                          'onmspointermove' in document ? 'MSPointerMove ' :
+                          'mousemove';
 
     var module = angular.module(MODULE_NAME, []),
         parts,
         i,
 
         events = [
-            MODULE_PREFIX + 'Touchstart:touchstart MSPointerDown',
-            MODULE_PREFIX + 'Touchend:touchend MSPointerUp',
-            MODULE_PREFIX + 'Touchmove:touchmove MSPointerMove'
-            //MODULE_PREFIX + 'Touchcancel:touchcancel'
+            MODULE_PREFIX + 'Touchstart:' + START_EVENT_NAME,
+            MODULE_PREFIX + 'Touchend:'   + END_EVENT_NAME,
+            MODULE_PREFIX + 'Touchmove:'  + MOVE_EVENT_NAME
         ];
 
     for (i = 0; i < events.length; i++) {
